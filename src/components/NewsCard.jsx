@@ -2,7 +2,7 @@ import React from 'react'
 import newsdefault from '../assets/news.jpg';
 
 const NewsCard = ({ newsdata }) => {
- 
+
   const filteredNewsData = newsdata.filter(news => 
     !(news.title && news.title.includes('[Removed]')) &&
     !(news.description && news.description.includes('[Removed]'))
@@ -13,7 +13,7 @@ const NewsCard = ({ newsdata }) => {
       {filteredNewsData.map((news, index) => (
         <div className="news-card card mb-4" key={index}>
           <img 
-            src={news.urlToImage ? news.urlToImage : newsdefault} 
+            src={news.image ? news.image : newsdefault}  // GNews uses `image` instead of `urlToImage`
             className="card-img-top" 
             alt={news.title || 'Default News Image'} 
           />

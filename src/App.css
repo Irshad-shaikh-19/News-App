@@ -87,10 +87,12 @@ body.dark-mode {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
+    cursor: pointer;
   }
   
   .news-card:hover {
     transform: scale(1.05);
+
   }
   
  
